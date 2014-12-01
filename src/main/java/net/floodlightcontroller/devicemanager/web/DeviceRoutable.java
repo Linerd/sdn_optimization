@@ -17,11 +17,11 @@
 
 package net.floodlightcontroller.devicemanager.web;
 
+import net.floodlightcontroller.restserver.RestletRoutable;
+
 import org.restlet.Context;
 import org.restlet.Restlet;
 import org.restlet.routing.Router;
-
-import net.floodlightcontroller.restserver.RestletRoutable;
 
 /**
  * Routable for device rest api

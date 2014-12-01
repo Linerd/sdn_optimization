@@ -7,7 +7,6 @@ import net.floodlightcontroller.core.test.MockThreadPoolService;
 import net.floodlightcontroller.linkdiscovery.ILinkDiscovery;
 import net.floodlightcontroller.test.FloodlightTestCase;
 import net.floodlightcontroller.threadpool.IThreadPoolService;
-import net.floodlightcontroller.topology.TopologyManager;
 
 import org.junit.Before;
 import org.junit.Test;

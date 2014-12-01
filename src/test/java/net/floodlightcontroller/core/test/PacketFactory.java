@@ -11,9 +11,9 @@ import net.floodlightcontroller.packet.UDP;
 import net.floodlightcontroller.util.MACAddress;
 
 import org.openflow.protocol.OFPacketIn;
+import org.openflow.protocol.OFPacketIn.OFPacketInReason;
 import org.openflow.protocol.OFPacketOut;
 import org.openflow.protocol.OFType;
-import org.openflow.protocol.OFPacketIn.OFPacketInReason;
 import org.openflow.protocol.factory.BasicFactory;
 
 /**

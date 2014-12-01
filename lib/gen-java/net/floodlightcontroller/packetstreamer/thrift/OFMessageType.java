@@ -6,9 +6,6 @@
 package net.floodlightcontroller.packetstreamer.thrift;
 
 
-import java.util.Map;
-import java.util.HashMap;
-import org.apache.thrift.TEnum;
 
 /**
  * OFMessage type

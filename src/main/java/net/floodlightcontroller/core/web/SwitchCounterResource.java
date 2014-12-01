@@ -22,12 +22,12 @@ import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.openflow.util.HexString;
-import org.restlet.resource.Get;
-
 import net.floodlightcontroller.core.IFloodlightProviderService;
 import net.floodlightcontroller.counter.ICounter;
 import net.floodlightcontroller.counter.ICounterStoreService;
+
+import org.openflow.util.HexString;
+import org.restlet.resource.Get;
 
 /**
  * Get counters for a particular switch 

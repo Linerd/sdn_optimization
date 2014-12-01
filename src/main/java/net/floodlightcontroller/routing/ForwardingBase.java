@@ -18,9 +18,9 @@
 package net.floodlightcontroller.routing;
 
 import java.io.IOException;
-import java.util.EnumSet;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.EnumSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -40,9 +40,6 @@ import net.floodlightcontroller.devicemanager.IDeviceService;
 import net.floodlightcontroller.devicemanager.SwitchPort;
 import net.floodlightcontroller.packet.Ethernet;
 import net.floodlightcontroller.packet.IPacket;
-import net.floodlightcontroller.routing.IRoutingService;
-import net.floodlightcontroller.routing.IRoutingDecision;
-import net.floodlightcontroller.routing.Route;
 import net.floodlightcontroller.topology.ITopologyService;
 import net.floodlightcontroller.topology.NodePortTuple;
 import net.floodlightcontroller.util.OFMessageDamper;

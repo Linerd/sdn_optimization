@@ -1,11 +1,13 @@
 package net.floodlightcontroller.topology;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import static org.junit.Assert.*;
 
 import net.floodlightcontroller.core.IFloodlightProviderService;
 import net.floodlightcontroller.core.module.FloodlightModuleContext;
@@ -13,9 +15,6 @@ import net.floodlightcontroller.core.test.MockFloodlightProvider;
 import net.floodlightcontroller.core.test.MockThreadPoolService;
 import net.floodlightcontroller.linkdiscovery.ILinkDiscovery;
 import net.floodlightcontroller.threadpool.IThreadPoolService;
-import net.floodlightcontroller.topology.NodePortTuple;
-import net.floodlightcontroller.topology.TopologyInstance;
-import net.floodlightcontroller.topology.TopologyManager;
 
 import org.junit.Before;
 import org.junit.Test;

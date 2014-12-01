@@ -1,21 +1,16 @@
 package net.floodlightcontroller.virtualnetwork;
 
-import static org.easymock.EasyMock.*;
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.expectLastCall;
+import static org.easymock.EasyMock.replay;
 
 import java.util.List;
 
-import org.easymock.EasyMock;
-import org.junit.Before;
-import org.junit.Test;
-import org.openflow.protocol.OFMatch;
-import org.openflow.protocol.OFPacketIn;
-import org.openflow.protocol.OFType;
-import org.openflow.protocol.OFPacketIn.OFPacketInReason;
-
 import net.floodlightcontroller.core.FloodlightContext;
 import net.floodlightcontroller.core.IFloodlightProviderService;
-import net.floodlightcontroller.core.IOFMessageListener;
 import net.floodlightcontroller.core.IListener.Command;
+import net.floodlightcontroller.core.IOFMessageListener;
 import net.floodlightcontroller.core.IOFSwitch;
 import net.floodlightcontroller.core.module.FloodlightModuleContext;
 import net.floodlightcontroller.core.test.MockThreadPoolService;
@@ -37,7 +32,14 @@ import net.floodlightcontroller.test.FloodlightTestCase;
 import net.floodlightcontroller.threadpool.IThreadPoolService;
 import net.floodlightcontroller.topology.ITopologyService;
 import net.floodlightcontroller.util.MACAddress;
-import net.floodlightcontroller.virtualnetwork.VirtualNetworkFilter;
+
+import org.easymock.EasyMock;
+import org.junit.Before;
+import org.junit.Test;
+import org.openflow.protocol.OFMatch;
+import org.openflow.protocol.OFPacketIn;
+import org.openflow.protocol.OFPacketIn.OFPacketInReason;
+import org.openflow.protocol.OFType;
 
 public class VirtualNetworkFilterTest extends FloodlightTestCase {
     protected VirtualNetworkFilter vns;

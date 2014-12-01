@@ -1,6 +1,13 @@
 package net.floodlightcontroller.flowcache;
 
-import static org.easymock.EasyMock.*;
+import static org.easymock.EasyMock.anyObject;
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.eq;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.expectLastCall;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.reset;
+import static org.easymock.EasyMock.verify;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,11 +17,9 @@ import net.floodlightcontroller.core.IListener.Command;
 import net.floodlightcontroller.core.module.FloodlightModuleContext;
 import net.floodlightcontroller.core.test.MockFloodlightProvider;
 import net.floodlightcontroller.core.test.MockThreadPoolService;
+import net.floodlightcontroller.counter.CounterValue.CounterType;
 import net.floodlightcontroller.counter.ICounterStoreService;
 import net.floodlightcontroller.counter.SimpleCounter;
-import net.floodlightcontroller.counter.CounterValue.CounterType;
-import net.floodlightcontroller.flowcache.IFlowReconcileListener;
-import net.floodlightcontroller.flowcache.OFMatchReconcile;
 import net.floodlightcontroller.test.FloodlightTestCase;
 import net.floodlightcontroller.threadpool.IThreadPoolService;
 

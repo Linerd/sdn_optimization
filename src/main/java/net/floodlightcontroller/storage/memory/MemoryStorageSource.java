@@ -17,13 +17,6 @@
 
 package net.floodlightcontroller.storage.memory;
 
-import net.floodlightcontroller.core.module.FloodlightModuleContext;
-import net.floodlightcontroller.perfmon.IPktInProcessingTimeService;
-import net.floodlightcontroller.storage.nosql.NoSqlStorageSource;
-import net.floodlightcontroller.storage.SynchronousExecutorService;
-import net.floodlightcontroller.storage.IStorageSourceService;
-import net.floodlightcontroller.core.module.IFloodlightService;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -31,7 +24,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import net.floodlightcontroller.core.module.FloodlightModuleContext;
+import net.floodlightcontroller.core.module.IFloodlightService;
+import net.floodlightcontroller.perfmon.IPktInProcessingTimeService;
+import net.floodlightcontroller.storage.IStorageSourceService;
 import net.floodlightcontroller.storage.StorageException;
+import net.floodlightcontroller.storage.SynchronousExecutorService;
+import net.floodlightcontroller.storage.nosql.NoSqlStorageSource;
 
 public class MemoryStorageSource extends NoSqlStorageSource {
     

@@ -17,6 +17,10 @@
 
 package net.floodlightcontroller.devicemanager.internal;
 
+import static net.floodlightcontroller.devicemanager.internal.DeviceManagerImpl.DeviceUpdate.Change.ADD;
+import static net.floodlightcontroller.devicemanager.internal.DeviceManagerImpl.DeviceUpdate.Change.CHANGE;
+import static net.floodlightcontroller.devicemanager.internal.DeviceManagerImpl.DeviceUpdate.Change.DELETE;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
@@ -39,21 +43,21 @@ import java.util.concurrent.TimeUnit;
 
 import net.floodlightcontroller.core.FloodlightContext;
 import net.floodlightcontroller.core.IFloodlightProviderService;
+import net.floodlightcontroller.core.IFloodlightProviderService.Role;
 import net.floodlightcontroller.core.IHAListener;
 import net.floodlightcontroller.core.IInfoProvider;
 import net.floodlightcontroller.core.IOFMessageListener;
 import net.floodlightcontroller.core.IOFSwitch;
-import net.floodlightcontroller.core.IFloodlightProviderService.Role;
 import net.floodlightcontroller.core.module.FloodlightModuleContext;
 import net.floodlightcontroller.core.module.IFloodlightModule;
 import net.floodlightcontroller.core.module.IFloodlightService;
 import net.floodlightcontroller.core.util.SingletonTask;
 import net.floodlightcontroller.devicemanager.IDevice;
+import net.floodlightcontroller.devicemanager.IDeviceListener;
 import net.floodlightcontroller.devicemanager.IDeviceService;
 import net.floodlightcontroller.devicemanager.IEntityClass;
 import net.floodlightcontroller.devicemanager.IEntityClassListener;
 import net.floodlightcontroller.devicemanager.IEntityClassifierService;
-import net.floodlightcontroller.devicemanager.IDeviceListener;
 import net.floodlightcontroller.devicemanager.SwitchPort;
 import net.floodlightcontroller.devicemanager.web.DeviceRoutable;
 import net.floodlightcontroller.flowcache.IFlowReconcileListener;
@@ -71,8 +75,6 @@ import net.floodlightcontroller.threadpool.IThreadPoolService;
 import net.floodlightcontroller.topology.ITopologyListener;
 import net.floodlightcontroller.topology.ITopologyService;
 import net.floodlightcontroller.util.MultiIterator;
-import static net.floodlightcontroller.devicemanager.internal.
-DeviceManagerImpl.DeviceUpdate.Change.*;
 
 import org.openflow.protocol.OFMatchWithSwDpid;
 import org.openflow.protocol.OFMessage;

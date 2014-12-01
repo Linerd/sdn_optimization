@@ -29,20 +29,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
+import net.floodlightcontroller.devicemanager.IDevice;
+import net.floodlightcontroller.devicemanager.IDeviceService.DeviceField;
+import net.floodlightcontroller.devicemanager.IEntityClass;
+import net.floodlightcontroller.devicemanager.SwitchPort;
+import net.floodlightcontroller.devicemanager.SwitchPort.ErrorStatus;
+import net.floodlightcontroller.devicemanager.web.DeviceSerializer;
+import net.floodlightcontroller.packet.Ethernet;
+import net.floodlightcontroller.packet.IPv4;
+import net.floodlightcontroller.topology.ITopologyService;
+
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.openflow.util.HexString;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import net.floodlightcontroller.devicemanager.IDeviceService.DeviceField;
-import net.floodlightcontroller.devicemanager.web.DeviceSerializer;
-import net.floodlightcontroller.devicemanager.IDevice;
-import net.floodlightcontroller.devicemanager.IEntityClass;
-import net.floodlightcontroller.devicemanager.SwitchPort;
-import net.floodlightcontroller.devicemanager.SwitchPort.ErrorStatus;
-import net.floodlightcontroller.packet.Ethernet;
-import net.floodlightcontroller.packet.IPv4;
-import net.floodlightcontroller.topology.ITopologyService;
 
 /**
  * Concrete implementation of {@link IDevice}

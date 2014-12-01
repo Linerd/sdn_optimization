@@ -1,13 +1,13 @@
 package net.floodlightcontroller.core;
 
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
-
 import net.floodlightcontroller.core.internal.CmdLineSettings;
 import net.floodlightcontroller.core.module.FloodlightModuleException;
 import net.floodlightcontroller.core.module.FloodlightModuleLoader;
 import net.floodlightcontroller.core.module.IFloodlightModuleContext;
 import net.floodlightcontroller.restserver.IRestApiService;
+
+import org.kohsuke.args4j.CmdLineException;
+import org.kohsuke.args4j.CmdLineParser;
 
 /**
  * Host for the Floodlight main method

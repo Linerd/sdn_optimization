@@ -17,10 +17,10 @@
 
 package net.floodlightcontroller.hub;
 
+import static org.easymock.EasyMock.capture;
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.replay;
 import static org.easymock.EasyMock.verify;
-import static org.easymock.EasyMock.capture;
 
 import java.util.Arrays;
 
@@ -39,9 +39,9 @@ import org.easymock.Capture;
 import org.easymock.CaptureType;
 import org.junit.Before;
 import org.junit.Test;
+import org.openflow.protocol.OFMessage;
 import org.openflow.protocol.OFPacketIn;
 import org.openflow.protocol.OFPacketIn.OFPacketInReason;
-import org.openflow.protocol.OFMessage;
 import org.openflow.protocol.OFPacketOut;
 import org.openflow.protocol.OFPort;
 import org.openflow.protocol.OFType;

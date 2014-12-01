@@ -23,8 +23,6 @@ import net.floodlightcontroller.counter.ICounterStoreService;
 import net.floodlightcontroller.counter.SimpleCounter;
 import net.floodlightcontroller.devicemanager.IDevice;
 import net.floodlightcontroller.flowcache.IFlowCacheService.FCQueryEvType;
-import net.floodlightcontroller.flowcache.IFlowReconcileListener;
-import net.floodlightcontroller.flowcache.OFMatchReconcile;
 import net.floodlightcontroller.threadpool.IThreadPoolService;
 
 import org.openflow.protocol.OFType;

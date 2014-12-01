@@ -21,13 +21,14 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.EnumSet;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.Iterator;
+
+import junit.framework.TestCase;
+import net.floodlightcontroller.devicemanager.IDeviceService.DeviceField;
 
 import org.junit.Test;
-import net.floodlightcontroller.devicemanager.IDeviceService.DeviceField;
-import junit.framework.TestCase;
 
 /**
  * 

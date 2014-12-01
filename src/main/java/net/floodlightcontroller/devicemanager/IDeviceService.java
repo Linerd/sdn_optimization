@@ -21,8 +21,10 @@ import java.util.Collection;
 import java.util.EnumSet;
 import java.util.Iterator;
 
+import net.floodlightcontroller.core.FloodlightContext;
 import net.floodlightcontroller.core.FloodlightContextStore;
 import net.floodlightcontroller.core.module.IFloodlightService;
+import net.floodlightcontroller.devicemanager.internal.Device;
 
 /**
  * Device manager allows interacting with devices on the network.  Note

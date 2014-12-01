@@ -36,10 +36,10 @@ import net.floodlightcontroller.core.module.FloodlightModuleContext;
 import net.floodlightcontroller.core.module.FloodlightModuleException;
 import net.floodlightcontroller.core.module.IFloodlightModule;
 import net.floodlightcontroller.core.module.IFloodlightService;
-import net.floodlightcontroller.counter.ICounter;
 import net.floodlightcontroller.counter.CounterStore;
-import net.floodlightcontroller.counter.ICounterStoreService;
 import net.floodlightcontroller.counter.CounterValue.CounterType;
+import net.floodlightcontroller.counter.ICounter;
+import net.floodlightcontroller.counter.ICounterStoreService;
 import net.floodlightcontroller.restserver.IRestApiService;
 import net.floodlightcontroller.storage.web.StorageWebRoutable;
 

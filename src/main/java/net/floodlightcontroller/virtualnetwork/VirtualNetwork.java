@@ -3,9 +3,10 @@ package net.floodlightcontroller.virtualnetwork;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 import net.floodlightcontroller.util.MACAddress;
+
+import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
  * Data structure for storing and outputing information of a virtual network created

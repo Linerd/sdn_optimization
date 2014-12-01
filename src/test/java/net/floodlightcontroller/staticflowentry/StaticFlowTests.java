@@ -1,5 +1,18 @@
 package net.floodlightcontroller.staticflowentry;
 
+import static net.floodlightcontroller.staticflowentry.StaticFlowEntryPusher.COLUMN_ACTIONS;
+import static net.floodlightcontroller.staticflowentry.StaticFlowEntryPusher.COLUMN_DL_DST;
+import static net.floodlightcontroller.staticflowentry.StaticFlowEntryPusher.COLUMN_DL_VLAN;
+import static net.floodlightcontroller.staticflowentry.StaticFlowEntryPusher.COLUMN_NAME;
+import static net.floodlightcontroller.staticflowentry.StaticFlowEntryPusher.COLUMN_NW_DST;
+import static net.floodlightcontroller.staticflowentry.StaticFlowEntryPusher.COLUMN_SWITCH;
+import static org.easymock.EasyMock.capture;
+import static org.easymock.EasyMock.createNiceMock;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.expectLastCall;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -8,6 +21,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import net.floodlightcontroller.core.FloodlightContext;
+import net.floodlightcontroller.core.IFloodlightProviderService.Role;
+import net.floodlightcontroller.core.IOFSwitch;
+import net.floodlightcontroller.core.module.FloodlightModuleContext;
+import net.floodlightcontroller.core.module.FloodlightModuleException;
+import net.floodlightcontroller.core.test.MockFloodlightProvider;
+import net.floodlightcontroller.restserver.RestApiServer;
+import net.floodlightcontroller.storage.IStorageSourceService;
+import net.floodlightcontroller.storage.memory.MemoryStorageSource;
+import net.floodlightcontroller.test.FloodlightTestCase;
 
 import org.easymock.Capture;
 import org.easymock.CaptureType;
@@ -19,21 +42,6 @@ import org.openflow.protocol.OFPort;
 import org.openflow.protocol.action.OFAction;
 import org.openflow.protocol.action.OFActionOutput;
 import org.openflow.util.HexString;
-
-
-import net.floodlightcontroller.core.FloodlightContext;
-import net.floodlightcontroller.core.IFloodlightProviderService.Role;
-import net.floodlightcontroller.core.IOFSwitch;
-import net.floodlightcontroller.core.module.FloodlightModuleContext;
-import net.floodlightcontroller.core.module.FloodlightModuleException;
-import net.floodlightcontroller.core.test.MockFloodlightProvider;
-import net.floodlightcontroller.test.FloodlightTestCase;
-import net.floodlightcontroller.restserver.RestApiServer;
-import net.floodlightcontroller.staticflowentry.StaticFlowEntryPusher;
-import net.floodlightcontroller.storage.IStorageSourceService;
-import net.floodlightcontroller.storage.memory.MemoryStorageSource;
-import static net.floodlightcontroller.staticflowentry.StaticFlowEntryPusher.*;
-import static org.easymock.EasyMock.*;
 
 public class StaticFlowTests extends FloodlightTestCase {    
     

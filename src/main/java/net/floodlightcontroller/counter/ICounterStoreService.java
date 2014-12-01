@@ -3,12 +3,12 @@ package net.floodlightcontroller.counter;
 import java.util.List;
 import java.util.Map;
 
-import org.openflow.protocol.OFMessage;
-
 import net.floodlightcontroller.core.IOFSwitch;
 import net.floodlightcontroller.core.module.IFloodlightService;
 import net.floodlightcontroller.counter.CounterStore.NetworkLayer;
 import net.floodlightcontroller.packet.Ethernet;
+
+import org.openflow.protocol.OFMessage;
 
 public interface ICounterStoreService extends IFloodlightService {
 

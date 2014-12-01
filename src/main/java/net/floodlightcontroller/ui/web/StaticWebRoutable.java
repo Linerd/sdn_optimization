@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
-import org.restlet.Client;
-import org.restlet.Context;
-import org.restlet.Restlet;
-import org.restlet.data.Protocol;
-import org.restlet.resource.Directory;
-import org.restlet.routing.Router;
-
 import net.floodlightcontroller.core.module.FloodlightModuleContext;
 import net.floodlightcontroller.core.module.FloodlightModuleException;
 import net.floodlightcontroller.core.module.IFloodlightModule;
 import net.floodlightcontroller.core.module.IFloodlightService;
 import net.floodlightcontroller.restserver.IRestApiService;
 import net.floodlightcontroller.restserver.RestletRoutable;
+
+import org.restlet.Client;
+import org.restlet.Context;
+import org.restlet.Restlet;
+import org.restlet.data.Protocol;
+import org.restlet.resource.Directory;
+import org.restlet.routing.Router;
 
 public class StaticWebRoutable implements RestletRoutable, IFloodlightModule {
 

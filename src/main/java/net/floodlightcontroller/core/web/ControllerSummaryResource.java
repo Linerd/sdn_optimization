@@ -19,10 +19,10 @@ package net.floodlightcontroller.core.web;
 
 import java.util.Map;
 
+import net.floodlightcontroller.core.IFloodlightProviderService;
+
 import org.restlet.resource.Get;
 import org.restlet.resource.ServerResource;
-
-import net.floodlightcontroller.core.IFloodlightProviderService;
 
 /**
  * Get summary counters registered by all modules

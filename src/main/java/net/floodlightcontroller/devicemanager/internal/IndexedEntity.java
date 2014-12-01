@@ -2,11 +2,11 @@ package net.floodlightcontroller.devicemanager.internal;
 
 import java.util.EnumSet;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import net.floodlightcontroller.devicemanager.IDeviceService;
 import net.floodlightcontroller.devicemanager.IDeviceService.DeviceField;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**

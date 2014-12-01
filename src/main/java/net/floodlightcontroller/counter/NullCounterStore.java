@@ -7,8 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.openflow.protocol.OFMessage;
-
 import net.floodlightcontroller.core.IOFSwitch;
 import net.floodlightcontroller.core.module.FloodlightModuleContext;
 import net.floodlightcontroller.core.module.FloodlightModuleException;
@@ -17,6 +15,8 @@ import net.floodlightcontroller.core.module.IFloodlightService;
 import net.floodlightcontroller.counter.CounterStore.NetworkLayer;
 import net.floodlightcontroller.counter.CounterValue.CounterType;
 import net.floodlightcontroller.packet.Ethernet;
+
+import org.openflow.protocol.OFMessage;
 
 /**
  * An ICounsterStoreService implementation that does nothing.
