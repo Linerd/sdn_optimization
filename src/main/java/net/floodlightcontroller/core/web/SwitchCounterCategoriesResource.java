@@ -23,12 +23,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.openflow.util.HexString;
-import org.restlet.resource.Get;
-
 import net.floodlightcontroller.core.IFloodlightProviderService;
 import net.floodlightcontroller.counter.CounterStore.NetworkLayer;
 import net.floodlightcontroller.counter.ICounterStoreService;
+
+import org.openflow.util.HexString;
+import org.restlet.resource.Get;
 
 /**
  * Get the counter categories for a particular switch

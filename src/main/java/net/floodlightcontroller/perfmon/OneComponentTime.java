@@ -1,8 +1,8 @@
 package net.floodlightcontroller.perfmon;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-
 import net.floodlightcontroller.core.IOFMessageListener;
+
+import org.codehaus.jackson.annotate.JsonProperty;
 
 /**
  * Holds OF message processing time information for one IFloodlightModule.

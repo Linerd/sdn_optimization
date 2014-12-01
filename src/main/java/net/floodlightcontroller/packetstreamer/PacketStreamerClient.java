@@ -1,18 +1,21 @@
 package net.floodlightcontroller.packetstreamer;
 
-import net.floodlightcontroller.packetstreamer.thrift.*;
-
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+
+import net.floodlightcontroller.packetstreamer.thrift.Message;
+import net.floodlightcontroller.packetstreamer.thrift.OFMessageType;
+import net.floodlightcontroller.packetstreamer.thrift.Packet;
+import net.floodlightcontroller.packetstreamer.thrift.PacketStreamer;
+import net.floodlightcontroller.packetstreamer.thrift.SwitchPortTuple;
 
 import org.apache.thrift.TException;
-import org.apache.thrift.transport.TFramedTransport;
-import org.apache.thrift.transport.TTransport;
-import org.apache.thrift.transport.TSocket;
-import org.apache.thrift.transport.TTransportException;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;
-
+import org.apache.thrift.transport.TFramedTransport;
+import org.apache.thrift.transport.TSocket;
+import org.apache.thrift.transport.TTransport;
+import org.apache.thrift.transport.TTransportException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

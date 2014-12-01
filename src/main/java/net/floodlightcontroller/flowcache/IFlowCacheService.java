@@ -1,12 +1,12 @@
 package net.floodlightcontroller.flowcache;
 
-import org.openflow.protocol.OFMatchWithSwDpid;
-
 import net.floodlightcontroller.core.FloodlightContext;
 import net.floodlightcontroller.core.FloodlightContextStore;
 import net.floodlightcontroller.core.IOFSwitch;
-import net.floodlightcontroller.devicemanager.SwitchPort;
 import net.floodlightcontroller.core.module.IFloodlightService;
+import net.floodlightcontroller.devicemanager.SwitchPort;
+
+import org.openflow.protocol.OFMatchWithSwDpid;
 
 /**
  * The Interface IFlowCache.

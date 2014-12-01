@@ -18,8 +18,6 @@
 package net.floodlightcontroller.routing;
 import java.util.HashMap;
 
-import net.floodlightcontroller.routing.Link;
-
 import org.openflow.util.HexString;
 
 public class BroadcastTree {

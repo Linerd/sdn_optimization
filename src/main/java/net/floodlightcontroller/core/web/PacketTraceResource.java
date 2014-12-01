@@ -2,13 +2,13 @@ package net.floodlightcontroller.core.web;
 
 import java.util.concurrent.ConcurrentHashMap;
 
+import net.floodlightcontroller.core.OFMessageFilterManager;
+
 import org.restlet.data.Status;
 import org.restlet.resource.Post;
 import org.restlet.resource.ServerResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import net.floodlightcontroller.core.OFMessageFilterManager;
 
 public class PacketTraceResource extends ServerResource {
     protected static Logger log = LoggerFactory.getLogger(PacketTraceResource.class);

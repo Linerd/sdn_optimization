@@ -1,14 +1,13 @@
 package net.floodlightcontroller.core.web;
 
-import org.restlet.data.Status;
-import org.restlet.resource.ServerResource;
-
 import net.floodlightcontroller.core.IFloodlightProviderService;
 import net.floodlightcontroller.core.IFloodlightProviderService.Role;
 import net.floodlightcontroller.core.annotations.LogMessageDoc;
 
+import org.restlet.data.Status;
 import org.restlet.resource.Get;
 import org.restlet.resource.Post;
+import org.restlet.resource.ServerResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

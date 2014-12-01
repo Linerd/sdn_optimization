@@ -3,7 +3,6 @@ package net.floodlightcontroller.perfmon;
 import java.io.IOException;
 import java.sql.Timestamp;
 
-
 import org.codehaus.jackson.JsonGenerator;
 import org.codehaus.jackson.JsonProcessingException;
 import org.codehaus.jackson.map.JsonSerializer;

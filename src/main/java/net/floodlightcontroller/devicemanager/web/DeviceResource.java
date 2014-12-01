@@ -20,6 +20,7 @@ package net.floodlightcontroller.devicemanager.web;
 import java.util.Iterator;
 
 import net.floodlightcontroller.devicemanager.IDevice;
+
 import org.restlet.resource.Get;
 
 /**

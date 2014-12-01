@@ -8,8 +8,8 @@ import static net.floodlightcontroller.devicemanager.IDeviceService.DeviceField.
 import java.util.EnumSet;
 
 import net.floodlightcontroller.devicemanager.IDeviceService;
-import net.floodlightcontroller.devicemanager.IEntityClass;
 import net.floodlightcontroller.devicemanager.IDeviceService.DeviceField;
+import net.floodlightcontroller.devicemanager.IEntityClass;
 import net.floodlightcontroller.devicemanager.internal.DefaultEntityClassifier;
 import net.floodlightcontroller.devicemanager.internal.Entity;
 

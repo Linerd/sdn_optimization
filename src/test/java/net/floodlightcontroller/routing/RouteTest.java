@@ -17,11 +17,10 @@
 
 package net.floodlightcontroller.routing;
 
-import org.junit.Test;
-
-import net.floodlightcontroller.routing.Route;
 import net.floodlightcontroller.test.FloodlightTestCase;
 import net.floodlightcontroller.topology.NodePortTuple;
+
+import org.junit.Test;
 
 /**
  *

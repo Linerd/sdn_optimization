@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.codehaus.jackson.map.annotate.JsonSerialize;
-
 import net.floodlightcontroller.core.IOFMessageListener;
+
+import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 @JsonSerialize(using=CumulativeTimeBucketJSONSerializer.class)
 public class CumulativeTimeBucket {

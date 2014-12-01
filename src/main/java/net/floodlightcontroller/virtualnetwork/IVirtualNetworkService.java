@@ -1,6 +1,7 @@
 package net.floodlightcontroller.virtualnetwork;
 
 import java.util.Collection;
+
 import net.floodlightcontroller.core.module.IFloodlightService;
 import net.floodlightcontroller.util.MACAddress;
 

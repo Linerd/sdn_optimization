@@ -10,18 +10,17 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
 
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import net.floodlightcontroller.util.ClusterDFS;
 import net.floodlightcontroller.core.annotations.LogMessageCategory;
 import net.floodlightcontroller.core.annotations.LogMessageDoc;
 import net.floodlightcontroller.routing.BroadcastTree;
 import net.floodlightcontroller.routing.Link;
 import net.floodlightcontroller.routing.Route;
 import net.floodlightcontroller.routing.RouteId;
+import net.floodlightcontroller.util.ClusterDFS;
 import net.floodlightcontroller.util.LRUHashMap;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A representation of a network topology.  Used internally by 

@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import net.floodlightcontroller.core.module.FloodlightModuleLoader;
-import net.floodlightcontroller.core.module.IFloodlightModule;
 import net.floodlightcontroller.core.test.MockFloodlightProvider;
 import net.floodlightcontroller.core.test.MockThreadPoolService;
 import net.floodlightcontroller.counter.NullCounterStore;
@@ -17,6 +12,9 @@ import net.floodlightcontroller.devicemanager.test.MockDeviceManager;
 import net.floodlightcontroller.perfmon.NullPktInProcessingTime;
 import net.floodlightcontroller.storage.memory.MemoryStorageSource;
 import net.floodlightcontroller.topology.TopologyManager;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FloodlightTestModuleLoader extends FloodlightModuleLoader {
 	protected static Logger log = LoggerFactory.getLogger(FloodlightTestModuleLoader.class);

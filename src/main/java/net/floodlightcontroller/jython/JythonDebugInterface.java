@@ -4,13 +4,13 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import net.floodlightcontroller.core.module.FloodlightModuleContext;
 import net.floodlightcontroller.core.module.FloodlightModuleException;
 import net.floodlightcontroller.core.module.IFloodlightModule;
 import net.floodlightcontroller.core.module.IFloodlightService;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class JythonDebugInterface implements IFloodlightModule {
     protected static Logger log = LoggerFactory.getLogger(JythonDebugInterface.class);

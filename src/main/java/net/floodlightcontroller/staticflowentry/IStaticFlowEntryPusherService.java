@@ -2,9 +2,9 @@ package net.floodlightcontroller.staticflowentry;
 
 import java.util.Map;
 
-import org.openflow.protocol.OFFlowMod;
-
 import net.floodlightcontroller.core.module.IFloodlightService;
+
+import org.openflow.protocol.OFFlowMod;
 
 public interface IStaticFlowEntryPusherService extends IFloodlightService {
     /**

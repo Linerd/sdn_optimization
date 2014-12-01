@@ -17,8 +17,6 @@
 
 package net.floodlightcontroller.storage.nosql;
 
-import java.lang.Class;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -34,9 +32,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TimeZone;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import net.floodlightcontroller.storage.AbstractStorageSource;
 import net.floodlightcontroller.storage.CompoundPredicate;
 import net.floodlightcontroller.storage.IPredicate;
@@ -47,6 +42,9 @@ import net.floodlightcontroller.storage.RowOrdering;
 import net.floodlightcontroller.storage.StorageException;
 import net.floodlightcontroller.storage.StorageSourceNotification;
 import net.floodlightcontroller.storage.TypeMismatchStorageException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class NoSqlStorageSource extends AbstractStorageSource {
     protected static Logger log = LoggerFactory.getLogger(NoSqlStorageSource.class);

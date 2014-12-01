@@ -1,19 +1,17 @@
 package net.floodlightcontroller.packetstreamer;
 
+import net.floodlightcontroller.core.annotations.LogMessageCategory;
+// Generated code
+import net.floodlightcontroller.packetstreamer.thrift.PacketStreamer;
+
 import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.server.TServer;
 import org.apache.thrift.server.THsHaServer;
+import org.apache.thrift.server.TServer;
 import org.apache.thrift.transport.TFramedTransport;
 import org.apache.thrift.transport.TNonblockingServerSocket;
 import org.apache.thrift.transport.TNonblockingServerTransport;
-
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import net.floodlightcontroller.core.annotations.LogMessageCategory;
-// Generated code
-import net.floodlightcontroller.packetstreamer.thrift.*;
 
 /**
  * The PacketStreamer Server that brokers the packet streaming service.

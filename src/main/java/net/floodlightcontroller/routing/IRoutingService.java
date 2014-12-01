@@ -18,7 +18,6 @@
 package net.floodlightcontroller.routing;
 
 import net.floodlightcontroller.core.module.IFloodlightService;
-import net.floodlightcontroller.routing.Route;
 
 public interface IRoutingService extends IFloodlightService {
 

@@ -21,6 +21,7 @@ package net.floodlightcontroller.packet;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+
 import org.openflow.util.HexString;
 
 /**
