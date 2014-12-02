@@ -6,12 +6,6 @@ package edu.thu.we.filter;
 import java.util.Collection;
 import java.util.Map;
 
-import org.openflow.protocol.OFFlowMod;
-import org.openflow.protocol.OFMessage;
-import org.openflow.protocol.OFType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import net.floodlightcontroller.core.FloodlightContext;
 import net.floodlightcontroller.core.IFloodlightProviderService;
 import net.floodlightcontroller.core.IOFMessageListener;
@@ -21,6 +15,12 @@ import net.floodlightcontroller.core.module.FloodlightModuleException;
 import net.floodlightcontroller.core.module.IFloodlightModule;
 import net.floodlightcontroller.core.module.IFloodlightService;
 import net.floodlightcontroller.counter.ICounterStoreService;
+
+import org.openflow.protocol.OFMessage;
+import org.openflow.protocol.OFPacketIn;
+import org.openflow.protocol.OFType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author yikai
@@ -55,7 +55,7 @@ public class WEFlowModListener implements IFloodlightModule, IOFMessageListener 
 	 */
 	@Override
 	public boolean isCallbackOrderingPostreq(OFType type, String name) {
-		return type.equals(OFType.FLOW_MOD);
+		return type.equals(OFType.PACKET_IN);
 	}
 
 	/* (non-Javadoc)
@@ -64,9 +64,9 @@ public class WEFlowModListener implements IFloodlightModule, IOFMessageListener 
 	@Override
 	public net.floodlightcontroller.core.IListener.Command receive(
 			IOFSwitch sw, OFMessage msg, FloodlightContext cntx) {
-		if(msg.getType()==OFType.FLOW_MOD){
-			System.out.println("-----new flow mod-----");
-			System.out.println((OFFlowMod)msg);
+		if(msg.getType()==OFType.PACKET_IN){
+			System.out.println("-----new packetin-----");
+			System.out.println((OFPacketIn)msg);
 			return Command.CONTINUE;
 		}
 		else
@@ -119,7 +119,7 @@ public class WEFlowModListener implements IFloodlightModule, IOFMessageListener 
 	 */
 	@Override
 	public void startUp(FloodlightModuleContext context) {
-		floodlightProvider.addOFMessageListener(OFType.FLOW_MOD, this);
+		floodlightProvider.addOFMessageListener(OFType.PACKET_IN, this);
 
 	}
 
