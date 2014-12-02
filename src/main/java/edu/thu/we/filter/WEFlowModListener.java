@@ -15,7 +15,9 @@ import net.floodlightcontroller.core.module.FloodlightModuleException;
 import net.floodlightcontroller.core.module.IFloodlightModule;
 import net.floodlightcontroller.core.module.IFloodlightService;
 import net.floodlightcontroller.counter.ICounterStoreService;
+import net.floodlightcontroller.packet.IPv4;
 
+import org.openflow.protocol.OFMatch;
 import org.openflow.protocol.OFMessage;
 import org.openflow.protocol.OFPacketIn;
 import org.openflow.protocol.OFType;
@@ -64,12 +66,19 @@ public class WEFlowModListener implements IFloodlightModule, IOFMessageListener 
 	@Override
 	public net.floodlightcontroller.core.IListener.Command receive(
 			IOFSwitch sw, OFMessage msg, FloodlightContext cntx) {
-		if(msg.getType()==OFType.PACKET_IN){
-			System.out.println("-----new packetin-----");
-			System.out.println((OFPacketIn)msg);
+		if (msg.getType() == OFType.PACKET_IN) {
+			OFMatch match = new OFMatch();
+			match.loadFromPacket(((OFPacketIn) msg).getPacketData(),
+					((OFPacketIn) msg).getInPort());
+			if (IPv4.fromIPv4Address(match.getNetworkDestination()).equals(
+					"10.0.0.2")
+					&& IPv4.fromIPv4Address(match.getNetworkSource()).equals(
+							"10.0.0.1")) {
+				System.out.println("-----------new packetin---------");
+				System.out.println(match);
+			}
 			return Command.CONTINUE;
-		}
-		else
+		} else
 			return Command.CONTINUE;
 	}
 
