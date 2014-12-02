@@ -17,9 +17,11 @@ import net.floodlightcontroller.core.module.IFloodlightService;
 import net.floodlightcontroller.counter.ICounterStoreService;
 import net.floodlightcontroller.packet.IPv4;
 
+import org.openflow.protocol.OFFlowMod;
 import org.openflow.protocol.OFMatch;
 import org.openflow.protocol.OFMessage;
 import org.openflow.protocol.OFPacketIn;
+import org.openflow.protocol.OFPacketOut;
 import org.openflow.protocol.OFType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -57,7 +59,7 @@ public class WEFlowModListener implements IFloodlightModule, IOFMessageListener 
 	 */
 	@Override
 	public boolean isCallbackOrderingPostreq(OFType type, String name) {
-		return type.equals(OFType.PACKET_IN);
+		return type.equals(OFType.PACKET_IN)||type.equals(OFType.PACKET_OUT)||type.equals(OFType.FLOW_MOD);
 	}
 
 	/* (non-Javadoc)
@@ -66,21 +68,38 @@ public class WEFlowModListener implements IFloodlightModule, IOFMessageListener 
 	@Override
 	public net.floodlightcontroller.core.IListener.Command receive(
 			IOFSwitch sw, OFMessage msg, FloodlightContext cntx) {
+		OFMatch match = new OFMatch();
 		if (msg.getType() == OFType.PACKET_IN) {
-			OFMatch match = new OFMatch();
+
 			match.loadFromPacket(((OFPacketIn) msg).getPacketData(),
 					((OFPacketIn) msg).getInPort());
 			if (IPv4.fromIPv4Address(match.getNetworkDestination()).equals(
 					"10.0.0.2")
 					&& IPv4.fromIPv4Address(match.getNetworkSource()).equals(
 							"10.0.0.1")) {
-				System.out.println("-----------new packetin---------");
-				System.out.println("switchID: "+sw.getId());
+				System.out.println("-----------IN---------");
+				System.out.println("switchID: " + sw.getId());
 				System.out.println(match);
 			}
-			return Command.CONTINUE;
-		} else
-			return Command.CONTINUE;
+
+		} else if (msg.getType() == OFType.PACKET_OUT) {
+			match.loadFromPacket(((OFPacketOut) msg).getPacketData(),
+					((OFPacketOut) msg).getInPort());
+			if (IPv4.fromIPv4Address(match.getNetworkDestination()).equals(
+					"10.0.0.2")
+					&& IPv4.fromIPv4Address(match.getNetworkSource()).equals(
+							"10.0.0.1")) {
+				System.out.println("-----------OUT---------");
+				System.out.println("switchID: " + sw.getId());
+				System.out.println(match);
+			}
+
+		} else if (msg.getType() == OFType.FLOW_MOD) {
+			System.out.println("-----------MOD---------");
+			System.out.println((OFFlowMod) msg);
+		}
+		return Command.CONTINUE;
+
 	}
 
 	/* (non-Javadoc)
@@ -130,6 +149,8 @@ public class WEFlowModListener implements IFloodlightModule, IOFMessageListener 
 	@Override
 	public void startUp(FloodlightModuleContext context) {
 		floodlightProvider.addOFMessageListener(OFType.PACKET_IN, this);
+		floodlightProvider.addOFMessageListener(OFType.PACKET_OUT, this);
+		floodlightProvider.addOFMessageListener(OFType.FLOW_MOD,this);
 
 	}
 
