@@ -75,6 +75,7 @@ public class WEFlowModListener implements IFloodlightModule, IOFMessageListener 
 					&& IPv4.fromIPv4Address(match.getNetworkSource()).equals(
 							"10.0.0.1")) {
 				System.out.println("-----------new packetin---------");
+				System.out.println("switchID: "+sw.getId());
 				System.out.println(match);
 			}
 			return Command.CONTINUE;
